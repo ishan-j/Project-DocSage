@@ -1,0 +1,209 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mental Health Survey</title>
+    <link href="{{url_for('static', filename='css/page.css')}}" rel="stylesheet">
+</head>
+
+<body>
+
+
+    <section class="head">
+
+        <h2>Take a Mental Health Survey</h2>
+
+    </section>
+    <section class="questions">
+        <form action="/predict" method="post">
+            {{ form.csrf_token }}
+            {{ form.hidden_tag() }}
+
+<div>
+    <label for={{ form.age.id }}>What is your age?</label><br>
+    <input type="number" id="age" name="age" min="1" required>
+</div>
+<div>
+        <label for={{ form.Gender.id }}>Gender</label><br>
+    <select name="Gender" id="Gender">
+        <option value="Male">Male</option>
+        <option value="Female">Female</option>
+        <option value="Other">Other</option>
+    </select> 
+</div>
+<div>
+     <label for={{ form.self_employed.id }}>self_employed</label><br>
+    <select name="self_employed" id="self_employed">
+        <option value="Yes">Yes</option>
+        <option value="No">No</option>
+    </select>
+</div>
+            <div>
+            <label for={{ form.family_history.id }}>Do you have a family history of mental illness?</label><br>
+            <select name="family_history" id="family_history">
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+            </select>
+        </div>
+            <div>
+     <label for={{ form.work_interfere.id }}>work_interfere</label><br>
+    <select name="work_interfere" id="work_interfere">
+        <option value="Sometimes">Sometimes</option>
+        <option value="Don't know ">Don't know </option>
+        <option value="Never">Never</option>
+        <option value="Rarely">Rarely</option>
+        <option value="Often ">Often </option>
+    </select>
+</div>
+            <div>
+     <label for={{ form.no_employees.id }}>no_employees</label><br>
+    <select name="no_employees" id="no_employees">
+        <option value="6-25">6-25</option>
+        <option value="26-100 ">26-100 </option>
+        <option value="More than 1000">More than 1000</option>
+        <option value="100-500">100-500</option>
+        <option value="1-5 ">1-5 </option>
+        <option value="500-1000">500-1000</option>
+    </select>
+</div>
+<div>
+    <label for={{ form.remote_work.id }}>remote_work</label><br>
+    <select name="remote_work" id="remote_work">
+        <option value="Yes">Yes</option>
+        <option value="No">No</option>
+    </select>
+</div>
+<div>
+    <label for={{ form.tech_company.id }}>tech_company</label><br>
+    <select name="tech_company" id="tech_company">
+        <option value="Yes">Yes</option>
+        <option value="No">No</option>
+    </select>
+</div>
+<div>
+    <label for={{ form.benefits.id }}>benefits</label><br>
+    <select name="benefits" id="benefits">
+        <option value="Yes">Yes</option>
+        <option value="No">No</option>
+        <option value="Don't know">Don't know</option>
+    </select>
+</div>
+<div>
+    <label for={{ form.care_options.id }}>care_options</label><br>
+    <select name="care_options" id="care_options">
+        <option value="Yes">Yes</option>
+        <option value="No">No</option>
+        <option value="Not sure">Not sure</option>
+    </select>
+</div>
+<div>
+    <label for={{ form.wellness_program.id }}>wellness_program</label><br>
+    <select name="wellness_program" id="wellness_program">
+        <option value="Yes">Yes</option>
+        <option value="No">No</option>
+        <option value="Don't know">Don't know</option>
+    </select>
+</div>
+<div>
+    <label for={{ form.seek_help.id }}>seek_help</label><br>
+    <select name="seek_help" id="seek_help">
+        <option value="Yes">Yes</option>
+        <option value="No">No</option>
+        <option value="Don't know">Don't know</option>
+    </select>
+</div>
+<div>
+    <label for={{ form.anonymity.id }}>anonymity</label><br>
+    <select name="anonymity" id="anonymity">
+    <option value="Yes">Yes</option>
+        <option value="No">No</option>
+        <option value="Don't know">Don't know</option>
+    </select>
+</div>
+<div>
+    <label for={{ form.leave.id }}>leave</label><br> 
+    <select name="leave" id="leave">
+    <option value="Don't know">Don't know</option>
+        <option value="Somewhat easy">Somewhat easy</option>
+        <option value="Very easy">Very easy </option>
+        <option value="Somewhat difficult">Somewhat difficult</option>
+        <option value="Very difficult ">Very difficult </option>
+        <option value="Yes">Yes</option>
+        <option value="No">No</option>
+        <option value="Maybe">Maybe</option>
+    </select>
+</div>
+<div>
+    <label for={{ form.mental_health_consequence.id }}>mental_health_consequence</label><br>
+    <select name="mental_health_consequence" id="mental_health_consequence">
+        <option value="Yes">Yes</option>
+        <option value="No">No</option>
+        <option value="Maybe">Maybe</option>
+    </select>
+</div>
+<div>
+    <label for={{ form.phys_health_consequence.id }}>phys_health_consequence</label><br>
+    <select name="phys_health_consequence" id="fphys_health_consequence">
+        <option value="Yes">Yes</option>
+        <option value="No">No</option>
+        <option value="Maybe">Maybe</option>
+    </select>
+</div>
+<div>
+    <label for={{ form.coworkers.id }}>coworkers</label><br>
+    <select name="coworkers" id="coworkers">
+        <option value="Yes">Yes</option>
+        <option value="No">No</option>
+        <option value="Some of them">Some of them</option>
+    </select>
+</div>
+<div>
+    <label for={{ form.supervisor.id }}>supervisor</label><br>
+    <select name="supervisor" id="supervisor">
+        <option value="Yes">Yes</option>
+        <option value="No">No</option>
+        <option value="Some of them">Some of them</option>
+    </select>
+</div>
+<div>
+    <label for={{ form.mental_health_interview.id }}>mental_health_interview</label><br>
+    <select name="mental_health_interview" id="mental_health_interview">
+        <option value="Yes">Yes</option>
+        <option value="No">No</option>
+        <option value="Maybe">Maybe</option>
+    </select>
+</div>
+<div>
+    <label for={{ form.phys_health_interview.id }}>phys_health_interview</label><br>
+    <select name="phys_health_interview" id="phys_health_interview">
+        <option value="Yes">Yes</option>
+        <option value="No">No</option>
+        <option value="Maybe">Maybe</option>
+    </select>
+</div>
+<div>
+    <label for={{ form.mental_vs_physical.id }}>mental_vs_physical</label><br>
+    <select name="mental_vs_physical" id="mental_vs_physical">
+        <option value="Yes">Yes</option>
+        <option value="No">No</option>
+        <option value="Don't know">Don't know</option>
+    </select>
+</div>
+<div>
+    <label for={{ form.obs_consequence.id }}>obs_consequence</label><br>
+    <select name="obs_consequence" id="obs_consequence">
+        <option value="Yes">Yes</option>
+        <option value="No">No</option>
+    </select>
+</div>
+<div class="form-group pt-1">
+    {{ form.submit(class="btn btn-primary btn-block") }}
+</div>
+        </form>
+    </section>
+</body>
+
+</html>

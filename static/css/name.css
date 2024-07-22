@@ -1,0 +1,14 @@
+.img{
+    position: relative;
+    width: 100%;
+}
+.name{
+    
+    position: fixed;
+    margin-left: 10px;
+}
+.row1{
+    
+    position: fixed;
+    width: 100%;
+}

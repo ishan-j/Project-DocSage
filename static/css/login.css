@@ -1,0 +1,48 @@
+body {
+    padding: 0;
+    margin: 0;
+    }
+    
+  .site1{
+    width: 100%;
+    position: relative;
+    
+  }
+  .site1 image{
+    margin-top: -50px;
+  }
+    
+    .RowLogin {
+      width: 50%;
+      margin-left: 20%;
+      box-shadow: 0px 10px 10px gray;
+      padding: 5%;
+      
+      display: inline block;
+    }
+    
+    .imgcontainer img {
+      height: 25vh;
+      margin-left: 45%;
+      
+    }
+    input[type=text], [type=password]
+    {
+      
+        padding: 12px 8px;
+        display: inline-block;
+        width: 100%;
+        border: none;
+        box-sizing: border-box;
+        margin-bottom: 15px;
+        box-shadow:  0px 8px 16px 0px rgba(0,0,0,0.2);
+    }
+    .loginbt{
+      color: blue;
+      box-shadow: 0 px 4px 6px 0px blue;
+      width: 100%;
+      padding: 8px 4px;
+      
+    
+    }
+    

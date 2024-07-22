@@ -1,0 +1,16 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+.head{
+    height: 35px;
+    background-color: green;
+}
+
+.link a{
+    text-decoration: none;
+    font-size: large;
+    color: aliceblue;
+    background-color: green;  
+    margin: 10px;
+}

@@ -1,0 +1,39 @@
+
+.Footer{
+    background-color: black;
+    padding: 2%;
+    height: 50vh;
+}
+.Footer h2{
+    color: aliceblue;
+}
+.left{
+    float: left;
+    width: 50%;
+    
+}
+.right{
+    float: right;
+    width: 50%;
+}
+
+.Privacy{
+    width: 40%;   
+}
+
+.Contact{
+    width: 40%;    
+}
+
+.QuickLink{
+    width: 40%;    
+}
+
+.social{
+    width: 40%;   
+}
+
+.social img{
+    height: 15px;
+}
+
